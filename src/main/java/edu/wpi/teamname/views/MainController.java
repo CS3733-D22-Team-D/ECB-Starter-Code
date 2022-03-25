@@ -18,7 +18,11 @@ public class MainController {
 
   /** Set the properties of the mortgage model and calculate the monthly interest */
   @FXML
-  private void calculateTotalClicked() {}
+  private void calculateTotalClicked() {
+    value.setAmount(Double.parseDouble(amountField.getText()));
+    value.setRate(Double.parseDouble(rateField.getText()));
+    value.setYears(Integer.parseInt(yearField.getText()));
+  }
 
   /**
    * Enables the calculate button if every text box is filled. Disables it if any text box is empty

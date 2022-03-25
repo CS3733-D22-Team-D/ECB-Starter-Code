@@ -27,13 +27,8 @@ public class Mortgage {
     public void setYears(int years) {
         this.years = years;
     }
-<<<<<<< Updated upstream
+
     public double calculateMortgage() {
         return (amount * (rate * years) / (years - 1));
     }
-
-
-
-=======
->>>>>>> Stashed changes
 }
