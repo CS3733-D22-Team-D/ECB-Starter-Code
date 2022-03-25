@@ -30,6 +30,8 @@ public class MainController {
         value.setAmount(Double.parseDouble(amountField.getText()));
         value.setRate(Double.parseDouble(rateField.getText()));
         value.setYears(Integer.parseInt(yearField.getText()));
+
+        value.monthly_payment.setValue(value.calculateMortgage());
       } catch (Exception e) {
         e.printStackTrace();
         System.err.println("Illegal argument type used to calculate");
