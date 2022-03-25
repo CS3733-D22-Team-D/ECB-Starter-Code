@@ -1,5 +1,6 @@
 package edu.wpi.teamname.views;
 
+import edu.wpi.teamname.entity.Mortgage;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -9,6 +10,7 @@ public class MainController {
   @FXML private TextField rateField;
   @FXML private TextField yearField;
   @FXML private Button computeButton;
+  private Mortgage value;
 
   public MainController() {
     /* Inject entity objects */
