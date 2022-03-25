@@ -23,6 +23,7 @@ public class MainController {
     mortgage.amount = Integer.parseInt(amountField.getText());
     mortgage.rate = Float.parseFloat(rateField.getText());
     mortgage.years = Integer.parseInt(yearField.getText());
+    mortgage.calculatePayment();
   }
 
   /**

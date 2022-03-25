@@ -22,6 +22,6 @@ public class LabelController implements Initializable {
 
   @Override
   public void initialize(URL location, ResourceBundle resources) {
-    totalLabel.textProperty().bind(Bindings.format("$%.2f", mortgage));
+    totalLabel.textProperty().bind(Bindings.format("$%.2f", mortgage.result));
   }
 }

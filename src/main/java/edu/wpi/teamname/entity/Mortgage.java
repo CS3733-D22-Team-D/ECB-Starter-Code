@@ -1,14 +1,16 @@
 package edu.wpi.teamname.entity;
 
-import javafx.beans.property.SimpleDoubleProperty;
-
 public class Mortgage {
   public int amount;
   public float rate;
   public int years;
-  public SimpleDoubleProperty sdp;
+  public double result;
 
-  public double calculatePayment() {
-    return amount * (1 + Math.pow(rate, years)) / (years * 12);
+  public void calculatePayment() {
+    double monthlyRate = rate / 12;
+    int n = years * 12;
+    double compound = Math.pow(1 + monthlyRate, n);
+
+    result = (amount * (monthlyRate * compound) / (compound - 1));
   }
 }
