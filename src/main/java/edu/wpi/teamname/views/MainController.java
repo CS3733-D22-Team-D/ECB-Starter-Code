@@ -19,6 +19,7 @@ public class MainController {
   /** Set the properties of the mortgage model and calculate the monthly interest */
   @FXML
   private void calculateTotalClicked() {
+      value = new Mortgage();
       try {
         value.setAmount(Double.parseDouble(amountField.getText()));
         value.setRate(Double.parseDouble(rateField.getText()));
