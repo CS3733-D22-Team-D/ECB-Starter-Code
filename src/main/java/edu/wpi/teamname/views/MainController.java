@@ -16,7 +16,7 @@ public class MainController {
     /* Inject entity objects */
   }
 
-  /** Set the properties of the mortgage model and calculate the montly interest */
+  /** Set the properties of the mortgage model and calculate the monthly interest */
   @FXML
   private void calculateTotalClicked() {}
 
@@ -24,5 +24,11 @@ public class MainController {
    * Enables the calculate button if every text box is filled. Disables it if any text box is empty
    */
   @FXML
-  private void validateButton() {}
+  private void validateButton() {
+    if(amountField.getText().equals("") || rateField.getText().equals("") || yearField.getText().equals("")){
+
+    } else {
+      computeButton.setDisable(false);
+    }
+  }
 }
