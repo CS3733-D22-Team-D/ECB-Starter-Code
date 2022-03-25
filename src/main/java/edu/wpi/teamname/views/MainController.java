@@ -13,7 +13,13 @@ public class MainController {
   private boolean allowComputing;
   private Mortgage value;
 
+  public MainController(Mortgage mortgage) {
+    this.value = mortgage;
+    /* Inject entity objects */
+  }
+
   public MainController() {
+    this.value = new Mortgage();
     /* Inject entity objects */
   }
 
@@ -37,7 +43,9 @@ public class MainController {
    */
   @FXML
   private void validateButton() {
-    if(amountField.getText().equals("") || rateField.getText().equals("") || yearField.getText().equals("")){
+    if (amountField.getText().equals("")
+        || rateField.getText().equals("")
+        || yearField.getText().equals("")) {
       computeButton.setDisable(true);
     } else {
       computeButton.setDisable(false);

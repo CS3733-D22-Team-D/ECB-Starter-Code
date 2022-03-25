@@ -3,35 +3,37 @@ package edu.wpi.teamname.entity;
 import javafx.beans.property.SimpleDoubleProperty;
 
 public class Mortgage {
-    private double amount;
-    private double rate;
-    private int years;
+  private double amount;
+  private double rate;
+  private int years;
 
-    public SimpleDoubleProperty monthly_payment = new SimpleDoubleProperty();
+  public SimpleDoubleProperty monthly_payment = new SimpleDoubleProperty();
 
-    public Mortgage(double amount, double rate, int years){
-        this.amount = amount;
-        this.rate = rate;
-        this.years = years;
-    }
-    public Mortgage(){
-        this.amount = 0;
-        this.rate = 0;
-        this.years = 0;
-    }
+  public Mortgage(double amount, double rate, int years) {
+    this.amount = amount;
+    this.rate = rate;
+    this.years = years;
+  }
 
-    public void setAmount(double amount) {
-        this.amount = amount;
-    }
+  public Mortgage() {
+    this.amount = 0;
+    this.rate = 0;
+    this.years = 0;
+  }
 
-    public void setRate(double rate) {
-        this.rate = rate;
-    }
+  public void setAmount(double amount) {
+    this.amount = amount;
+  }
 
-    public void setYears(int years) {
-        this.years = years;
-    }
-    public double calculateMortgage() {
-        return (amount * (rate * years) / (years - 1));
-    }
+  public void setRate(double rate) {
+    this.rate = rate;
+  }
+
+  public void setYears(int years) {
+    this.years = years;
+  }
+
+  public double calculateMortgage() {
+    return (amount * (rate * years) / (years - 1));
+  }
 }
