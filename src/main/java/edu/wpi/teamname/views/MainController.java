@@ -10,7 +10,6 @@ public class MainController {
   @FXML private TextField rateField;
   @FXML private TextField yearField;
   @FXML private Button computeButton;
-  private boolean allowComputing;
   private Mortgage value;
 
   public MainController() {
@@ -20,7 +19,6 @@ public class MainController {
   /** Set the properties of the mortgage model and calculate the monthly interest */
   @FXML
   private void calculateTotalClicked() {
-    if (allowComputing) {
       try {
         value.setAmount(Double.parseDouble(amountField.getText()));
         value.setRate(Double.parseDouble(rateField.getText()));
@@ -29,8 +27,6 @@ public class MainController {
         e.printStackTrace();
         System.err.println("Illegal argument type used to calculate");
       }
-    }
-
   }
 
   /**
