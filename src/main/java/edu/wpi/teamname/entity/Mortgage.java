@@ -28,15 +28,5 @@ public class Mortgage {
         this.years = years;
     }
 
-    public double getAmount() {
-        return amount;
-    }
 
-    public double getRate() {
-        return rate;
-    }
-
-    public int getYears() {
-        return years;
-    }
 }
