@@ -31,7 +31,7 @@ public class Mortgage {
     public void setYears(int years) {
         this.years = years;
     }
-    public void calculateMortgage() {
-        monthly_payment.set(amount * (rate * years) / (years - 1));
+    public double calculateMortgage() {
+        return (amount * (rate * years) / (years - 1));
     }
 }
