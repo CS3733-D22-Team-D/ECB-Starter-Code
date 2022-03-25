@@ -39,7 +39,7 @@ public class MainController {
   @FXML
   private void validateButton() {
     if(amountField.getText().equals("") || rateField.getText().equals("") || yearField.getText().equals("")){
-
+      computeButton.setDisable(true);
     } else {
       computeButton.setDisable(false);
     }
