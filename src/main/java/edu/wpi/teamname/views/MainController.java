@@ -17,7 +17,7 @@ public class MainController {
     /* Inject entity objects */
   }
 
-  /** Set the properties of the mortgage model and calculate the montly interest */
+  /** Set the properties of the mortgage model and calculate the monthly interest */
   @FXML
   private void calculateTotalClicked() {
     if (allowComputing) {
@@ -38,8 +38,10 @@ public class MainController {
    */
   @FXML
   private void validateButton() {
-      if (!(amountField.getText().equals("") || rateField.getText().equals("") || yearField.getText().equals(""))) {
-          allowComputing = true;
-      } else allowComputing = false;
+    if(amountField.getText().equals("") || rateField.getText().equals("") || yearField.getText().equals("")){
+
+    } else {
+      computeButton.setDisable(false);
+    }
   }
 }
